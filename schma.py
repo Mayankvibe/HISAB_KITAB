@@ -9,7 +9,7 @@ class UserValidator(BaseModel):
     @field_validator("password")
     def check_password(cls, v):
         if len(v) < 6:
-            raise ValueError("Password too short atleast 6 digit")
+            raise ValueError("Password is to short atleast 6 digit")
         return v
     @field_validator("phone")
     def check_phone(cls,p):
@@ -29,7 +29,7 @@ class CustomerValidator(BaseModel):
     @field_validator("phone")
     def check_phone(cls,p):
         if not p.isdigit():
-            raise ValueError("Phone must contain only numbers")
+            raise ValueError("Phone must contain  numbers")
         if len(str(p))!= 10:
             raise ValueError("phone must be 10 digit")
         return p

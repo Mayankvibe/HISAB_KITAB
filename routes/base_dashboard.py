@@ -111,7 +111,7 @@ def add_customer(customer:CustomerValidator,db:Session=Depends(get_db),data=Depe
 
       return {
 
-         "msg":"Customer added"
+         "msg":"Customer Added"
 
       }
    
